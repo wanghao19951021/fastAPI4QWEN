@@ -1,53 +1,100 @@
-body {  
-            font-family: Arial, sans-serif;  
-            margin: 0;  
-            padding: 0;  
-            background-color: #f5f5f5;  
-        }  
-          
-        #chat-container {  
-            display: flex;  
-            flex-direction: column;  
-            height: 100vh;  
-            padding: 10px;  
-        }  
-          
-        #chat-window {  
-            flex: 1;  
-            background-color: #fff;  
-            padding: 10px;  
-            border-radius: 5px;  
-            overflow-y: auto;  
-            margin-bottom: 10px;  
-        }  
-          
-        #input-container {  
-            display: flex;  
-            justify-content: center;  
-            align-items: center;  
-            padding: 30px;  
-            font-size: 16px;  
-        }  
-          
-        #user-input {  
-            flex: 1;  
-            padding: 20px; /* 增加内边距 */  
-            font-size: 16px; /* 调整字体大小 */  
-            width: calc(100% - 60px); /* 减去按钮的宽度和间距 */  
-            border-radius: 5px;  
-            border: 1px solid #ccc;   
-        }  
-          
-        #send-button {  
-            padding: 20px 15px;  
-            border-radius: 5px;  
-            background-color: #007BFF;  
-            color: #fff;  
-            border: none;  
-            cursor: pointer;  
-        }  
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
 
-        #send-button:disabled {
-            cursor: not-allowed;
-            /* 可以添加其他禁用样式，例如：opacity、color、background-color等 */
-        }
+/* 头部导航栏 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#new-conversation-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* 对话列表容器 */
+#dialog-list-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* 留出顶部导航栏的空间 */
+    overflow-y: auto;
+}
+
+.dialog-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 单个对话窗口 */
+#dialog-window {
+    flex: 1;  
+    background-color: #fff;  
+    padding: 10px;  
+    border-radius: 5px;  
+    overflow-y: auto;  
+    margin-bottom: 10px;  
+}
+
+/* 聊天记录区域，增大字体大小 */
+.dialog-history {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 18px; /* 增大字体大小 */
+}
+
+/* 用户输入及发送按钮容器 */
+#dialog-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding: 30px;
+    background-color: #f5f5f5; /* 可以根据需要设置底部背景色 */
+}
+
+#dialog-input {
+    flex: 1;  
+    padding: 20px; /* 增加内边距 */  
+    font-size: 16px; /* 调整字体大小 */  
+    width: calc(100% - 60px); /* 减去按钮的宽度和间距 */  
+    border-radius: 5px;  
+    border: 1px solid #ccc;  
+
+}
+
+#dialog-send-btn {
+
+    padding: 20px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dialog-send-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

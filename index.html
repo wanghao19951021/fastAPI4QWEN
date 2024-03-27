@@ -3,21 +3,29 @@
 <head>  
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Simple Chat</title>   
+    <title>简易对话程序</title>   
      
      <!-- 引入外部样式表 -->
     <link rel="stylesheet"  href="myStyle.css">
 
 </head>  
 <body>  
-    <div id="chat-container">  
-        <h1>Simple Chat</h1>    
-        <div id="chat-window"></div>    
-        <div id="input-container">  
-            <input type="text" id="user-input" placeholder="Enter your message...">    
-            <button id="send-button" onclick="sendMessage()" disabled>Send</button>    
-        </div>  
-    </div>  
+    <div id="dialog-list-container">
+    <h1>对话程序——QWEN</h1>
+    <!-- 循环遍历对话列表 -->
+    <div id="dialog-item">
+        <div id="dialog-window"></div>
+        <div id="dialog-history">
+            <!-- 对话历史记录 -->
+        </div>
+        <div id="dialog-input-container">
+            <textarea id="dialog-input" placeholder="在这里输入问题，按Enter发送;同时按Ctrl+Enter可换行"></textarea>
+            <button id="dialog-send-btn" onclick="sendMessage()" disabled>发送</button>
+        </div>
+        
+    </div>
+    <!-- 更多对话项... -->
+</div>
   
     <script src="script.js"></script> <!-- 引入外部JavaScript文件 -->
     

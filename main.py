@@ -81,7 +81,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 #await websocket.send_text("\n")  
 
                 # 发送一个特殊标记表示回复已发送完毕
-                await websocket.send_text(f"{SPECIAL_END_MARKER}\n")
+                # await websocket.send_text(f"{SPECIAL_END_MARKER}\n")
                   
                 # 模拟其他处理时间，比如API调用  
                 await asyncio.sleep(random.random())  
