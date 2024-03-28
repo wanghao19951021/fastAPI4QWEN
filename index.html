@@ -12,15 +12,16 @@
 <body>  
     <div id="dialog-list-container">
     <h1>对话程序——QWEN</h1>
+    <button id="new-conversation-btn">新建会话</button>
     <!-- 循环遍历对话列表 -->
-    <div id="dialog-item">
-        <div id="dialog-window"></div>
-        <div id="dialog-history">
+    <div class="dialog-item-container">
+        <div class="dialog-window"></div>
+        <div class="dialog-history">
             <!-- 对话历史记录 -->
         </div>
-        <div id="dialog-input-container">
-            <textarea id="dialog-input" placeholder="在这里输入问题，按Enter发送;同时按Ctrl+Enter可换行"></textarea>
-            <button id="dialog-send-btn" onclick="sendMessage()" disabled>发送</button>
+        <div class="dialog-input-container">
+            <textarea class="dialog-input" placeholder="在这里输入问题，按Enter发送;同时按Ctrl+Enter可换行"></textarea>
+            <button class="dialog-send-btn" onclick="sendMessage(this)" disabled>发送</button>
         </div>
         
     </div>

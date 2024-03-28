@@ -1,13 +1,13 @@
 const END_OF_RESPONSE_MARKER = "__RESPONSE_COMPLETE__";
 
 // 获取聊天窗口元素
-const chatWindow = document.getElementById('dialog-window');  
+const chatWindow = document.querySelector('.dialog-window');  
 // 获取用户输入框元素
-const userInput = document.getElementById('dialog-input');  
+const userInput = document.querySelector('.dialog-input');  
 // 创建WebSocket连接至服务器
 const ws = new WebSocket('ws://localhost:8000/ws/chat'); 
 // 获取发送按钮元素
-const sendButton = document.getElementById('dialog-send-btn'); // 获取发送按钮元素 
+const sendButton = document.querySelector('.dialog-send-btn'); // 获取发送按钮元素 
 
 // 当WebSocket连接建立时，输出日志到控制台
 ws.onopen = function(event) {  
